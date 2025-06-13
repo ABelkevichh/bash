@@ -1,7 +1,9 @@
 #!/bin/bash
 
 URL="git@github.com:ABelkevichh/bash.git"
-REPO_CLONE="/mnt/g/belhard/bash/clone_git"
+REPO_CLONE="./clone_git"
+START_DIR=$(pwd)
+
 
 # Очистка и клонирование
 rm -rf "$REPO_CLONE"
@@ -67,6 +69,4 @@ else
 	exit 1
 fi
 
-rm -rf "$REPO_CLONE"
-
-
+cd "$START_DIR"
